@@ -1,1 +1,2 @@
-Display Method in A
+Area of Circle :1962.5
+Circumference of Circle : 157

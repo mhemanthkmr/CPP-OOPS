@@ -1,28 +1,22 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std ;
-class A
+// Basic Class Example
+// 1. Area of a Circle
+// 2. Cicumference of a Circle
+class Circle
 {
+private:
+	float radius;
 public:
-	void display() 
+	float area()
 	{
-		cout<<"Display Method in A";
+		cin>>radius;
+		return 3.14*radius*radius;
 	}
-};
-class B:virtual public A
-{
-public:
-	void show() 
+	float circumference()
 	{
-		cout<<"Display Method in B";
+		return 2*3.14*radius;
 	}
-};
-class C:virtual public A
-{
-
-};
-class D:public C,public B
-{
-
 };
 int main()
 {
@@ -30,7 +24,9 @@ int main()
 		freopen("input.txt", "r", stdin);
 		freopen("output.txt", "w", stdout);
 	#endif
-	D o;
-	o.display();
+
+	Circle o;
+	cout<<"Area of Circle :"<<o.area()<<endl;
+	cout<<"Circumference of Circle : "<<o.circumference()<<endl;
 	return 0;
 }
