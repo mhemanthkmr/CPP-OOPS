@@ -22,7 +22,6 @@ public:
 	{
 		cin>>name>>age;
 	}
-
 };
 int main()
 {
