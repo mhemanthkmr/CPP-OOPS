@@ -1,3 +1,1 @@
-30
-25
-8
+This Method is shown in A
