@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std ;
 
 class Shape
@@ -49,22 +50,23 @@ public:
 		return 2*radius*radius;
 	}
 };
+
+struct Rectanglee
+{
+	int length;
+	int bredth;
+};
 int main()
 {
 	#ifndef ONLINE_JUDGE
 		freopen("input.txt", "r", stdin);
 		freopen("output.txt", "w", stdout);
 	#endif	
-	Rectangle rec;
-	Square squ;
-	Circle cir;
-	rec.getdetails();
-	cout<<rec.area()<<endl;
-	squ.getdetails();
-	cout<<squ.area()<<endl;
-	cir.getdetails();
-	cout<<cir.area()<<endl;
-	
-
+	int a[5]={1,2,3,4,5};
+	Circle *p;
+	Circle obj;
+	p = &obj;
+	p->getdetails();
+	cout<<p->area()<<endl;
 	return 0;
 }

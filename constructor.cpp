@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std ;
-class Math
+class Test
+{
+public:
+	void display()
+	{
+		cout<<"Hello"<<endl;
+	}
+};
+class Math:public Test
 {
 private:
 	int a,b,c;
@@ -38,6 +46,7 @@ int main()
 	Math o3(o2);
 	o1.add();
 	o2.add();
+	o1.display();
 	o2.add();
 	return 0;
 }
