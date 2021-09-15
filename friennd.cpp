@@ -1,19 +1,5 @@
 #include <iostream>
 using namespace std ;
-class A 
-{
-private:
-	int x,y;
-public:
-	friend void start();
-};
-void start()
-{
-	A o;
-	o.x = 5;
-	o.y = 10;
-	cout<<o.x<<" "<<o.y<<endl;
-}
 int main()
 {
 	#ifndef ONLINE_JUDGE
@@ -21,8 +7,22 @@ int main()
 		freopen("output.txt", "w", stdout);
 	#endif
 
-	start();
-	A n;
-	n.start();
-	return 0;
+    int n;
+    int t;
+    cin >> n >> t;
+    int **outer = new int*[n];
+    for(int i = 0; i < n; i++) {
+        int k;
+        cin >> k;
+        outer[i] = new int[k];
+        for(int j = 0; j < k; j++) {
+            cin>>outer[i][j];
+        }
+    }
+    while(t--) {
+        int out;
+        int in;
+        cin >> out >> in;
+        cout << outer[out][in] << endl;
+    }
 }
